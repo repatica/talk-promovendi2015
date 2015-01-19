@@ -1,0 +1,81 @@
+\documentclass{beamer}
+\usepackage[latin1]{inputenc}
+\usetheme{Warsaw}
+\title{Worms and Caterpillars}
+\author{Nela Leki\'c}
+\date{\today}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}{Introduction}
+Based on paper
+\begin{center}
+\textbf{Phylogenetic partitions and ternary permutation constraint satisfaction problems on two linear orders}
+\end{center}
+by 
+\begin{center}
+\textbf{Leo van Iersel, Steven Kelk, Nela Leki\'c, Simone Linz}
+\end{center}
+\end{frame}
+
+\begin{frame}{Introduction}
+\begin{itemize}
+ \item A ternary Permutation-CSP is specified by a subset $\Pi$ of the symmetric group $S_3$ 
+ \item An instance of such a problem consists of a set of variables (or taxa) $X$ and a multiset of constraints
+ \item The constraints are ordered triples of distinct variables of $X$
+ \item The objective is to answer weather all constraints given by an instance of $\Pi$ can be satisfied by a number of linear orders
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The complexity of the 11 ternary permutations CSPs}
+\begin{table}
+\begin{center}
+\begin{tabular}{l l c c}
+	 &				&1LO	&2LO \\ \hline
+ $\Pi_0 \text{ (linear ordering)}$ & 123 				& P 	& NPC \\
+ $\Pi_1$ & 123, 132 			& P 	& NPC \\
+ $\Pi_2$ & 123, 213, 231 		& P 	& P \\
+ $\Pi_3$ & 123, 231, 312, 321 		& P 	& P \\
+ $\Pi_4$ & 123, 231			& NPC 	& NPC \\
+ $\Pi_5 \text{ (betweenness)}$ & 123, 321			& NPC 	& NPC \\
+ $\Pi_6$ & 123, 132, 231		& NPC 	& NPC \\
+ $\Pi_7 \text{ (circular ordering)}$ & 123, 231, 312 		& NPC 	& P \\
+ $\Pi_8$ & $S_3 \setminus$ 123, 231  	& NPC 	& P \\
+ $\Pi_9 \text{ (non-betweenness)} $ & $S_3 \setminus$ 123, 321  	& NPC 	& NPC \\
+ $\Pi_{10}$ & $S_3 \setminus$ 123 	& NPC 	& P 
+\end{tabular} 
+\end{center}
+\end{table} 
+\end{frame}
+
+
+\begin{frame}{An example}
+ Problem $2-\Pi_5$ consists of constraints of form $(123,321)$. To say that a linear order satisfies a $\Pi_5$-constraint $c=(abc)$ is to say that in that linear order either triple $abc$ or triple $cba$ is satisfied.
+\end{frame}
+
+
+\begin{frame}{Some phylogenetic background}
+\begin{itemize}
+ \item A binary rooted phylogenetic on $n$ leaves
+ \item Caterpillar
+ \item Triplet
+ \item When a tree is \textit{displayed} by another tree
+\end{itemize}
+
+ 
+\end{frame}
+
+
+\begin{frame}{$k$-Caterpillar Compatibility}
+\begin{itemize}
+\item[Instance] A set $R$ of rooted triplets.
+\item[Question] Do there exist at most $k$ caterpillars such that each element in $R$ is displayed by at least one such caterpillar?
+\end{itemize}
+\end{frame}
+
+
+\end{document}
